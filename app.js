@@ -17,7 +17,7 @@ app.set('views', './resources/views');
 app.set('view engine', 'ejs');
 
 //setting up the database
-mongoose.connect('mongodb+srv://nike:nike@cluster1.vr80o.gcp.mongodb.net/NepShare?retryWrites=true&w=majority, {
+mongoose.connect('mongodb+srv://nike:nike@cluster1.vr80o.gcp.mongodb.net/NepShare?retryWrites=true&w=majority', {
   useUnifiedTopology : true,
   useNewUrlParser : true,
   useCreateIndex : true
