@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>NepShare | First of its kind | File sharing.</title>
+    <link rel="stylesheet" href="/css/css.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/39408e3f6f.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js" integrity="sha512-aMGMvNYu8Ue4G+fHa359jcPb1u+ytAF+P2SCb+PxrjCdO3n3ZTxJ30zuH39rimUggmTwmh2u7wvQsDTHESnmfQ==" crossorigin="anonymous"></script>
+   <script src="/js/js.js" defer></script>
+   <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  </head>
+  <body>
+    <div class="backgroundContainer">
+      <div class="background background1">
+        <div class="feature-photo">
+          <h3 class="feature-1">Mera Peak</h3>
+          <p>Only the darings and adventurous people get to this place. Mera Peak is 6476m and is the highest trekking peak in Nepal.
+             Himalayas, the fierciest place in the world, but magnificent at the same time<br>
+             <span>Photo by <a class="credit" href="https://unsplash.com/@biseshgrg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Bisesh Gurung</a> on <a class="credit" href="https://unsplash.com/s/photos/nepal?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+          </p>
+         </div>
+
+      </div>
+      <div class="background background2">
+        <div class="feature-photo">
+          <h3 class="feature-2">Home</h3>
+          <p>A traditional nepalese meal. Umm, just the thought of a warm meal made with mother's hands makes many of us hungry. Daal-Vaat-tarkari - the most tastiest trio you'll ever find.<br>
+             <span>Photo by <a class="credit" href="https://unsplash.com/@abhishek_sanwa?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Abhishek Sanwa Limbu</a> on <a class="credit" href="https://unsplash.com/s/photos/nepal?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+          </p>
+        </div>
+      </div>
+      <div class="background background3">
+        <div class="feature-photo">
+          <h3 class="feature-3">Boudanath</h3>
+          <p>The warming lights of Boudanaath. When you are near this lights, the warmth is so pure and unique, it's not the warmth of your fireplace no. You have to go and feel it for yourself to know what I am talking about.<br>
+            <span>Photo by <a class="credit" href="https://unsplash.com/@jonnyjames2?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jonny James</a> on <a class="credit" href="https://unsplash.com/s/photos/nepal?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="logo-container">
+        <img alt="Nepal flag" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg">
+        <a href="/"><span>Nep<b style="color : #4BB543;">Share</b></span></a>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="hero-img">
+        <i class="fas fa-share-alt"></i>
+      </div>
+      <p class="hero-text">
+        Nepal Shares<br>
+        नेपाल गर्दै छ share !<br>
+        आउनु तपाई नि गर्नुहोस
+      </p>
+    </div>
+    <div class="upload-container">
+      <div class="drop-zone">
+        <div class="drop-icon-container">
+          <i class="fas fa-copy"></i>
+        </div>
+        <form class="upload-form" accept-charset= enctype="multipart/form-data">
+          <input type="file"  multiple="multiple" name="myfile" class="browse">
+        </form>
+        <p>Drop your Files here or, <a class="browseBtn">Browse <i class="fas fa-folder-open"></i></a></p>
+      </div>
+    </div>
+
+    <div class="features">
+      <ul>
+        <li>
+          सुपर fast Sharing !
+        </li>
+        <li>
+          प्रयोग गर्न सजिलो
+        </li>
+        <li>
+          नेपाली बाट नेपाली<br> कै लागि
+        </li>
+      </ul>
+    </div>
+
+    <div class="progress">
+      <div></div>
+    </div>
+
+    <div class="upload-more">
+      <a href="" class="upload-more-btn"><i class="fas fa-file-upload"></i></a>
+      <form enctype="multipart/form-data" class="upload-more-form">
+        <input name="myfile" type="file" multiple hidden>
+      </form>
+    </div>
+
+    <div class="chat-btn">
+      <i class="fab fa-earlybirds"></i> <!--memo : chatBtn.firstElementChild is used !-->
+      <div class="newMsgsCount"></div>
+      <div class="chat-box">
+        <div class="inactive">User Inactive</div>
+        <div class="chatMsgs"></div>
+        <form class="msg-form">
+          <input type="text" class="msg-field">
+        </form>
+      </div>
+    </div>
+
+    <div class="emailBtn">
+      <i class="fas fa-dove"></i>
+      <div class="email-form-wrapper">
+        <form class="email-form">
+          <input type="email" placeholder="Your email" required>
+          <input type="email" required placeholder="Send to">
+          <button class="send-email-btn" type="submit">Send <i class="fas fa-dove"></i></button>
+        </form>
+      </div>
+
+    </div>
+
+  </body>
+</html>

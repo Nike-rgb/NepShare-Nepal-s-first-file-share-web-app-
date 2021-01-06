@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>NepShare | Files shared with you</title>
+    <link rel="stylesheet" href="/css/css.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Xanh+Mono:ital@1&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/39408e3f6f.js" crossorigin="anonymous"></script>
+    <script src="/js/download.js" defer></script>
+  </head>
+  <body>
+    <div class="backgroundContainer">
+      <div class="background background1">
+        <div class="feature-photo">
+          <p>Only the darings and adventurous people get to this place. Mera Peak is 6476m and is the highest trekking peak in Nepal.
+             Himalayas, the fierciest place in the world, but magnificent at the same time<br>
+             <span>Photo by <a class="credit" href="https://unsplash.com/@biseshgrg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Bisesh Gurung</a> on <a class="credit" href="https://unsplash.com/s/photos/nepal?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+          </p>
+          <h3 class="feature-1">Mera Peak</h3>
+         </div>
+
+      </div>
+      <div class="background background2">
+        <div class="feature-photo">
+          <p>A traditional nepalese meal. Umm, just the thought of a warm meal made with mother's hands makes many of us hungry. Daal-Vaat-tarkari - the most tastiest trio you'll ever find.<br>
+             <span>Photo by <a class="credit" href="https://unsplash.com/@abhishek_sanwa?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Abhishek Sanwa Limbu</a> on <a class="credit" href="https://unsplash.com/s/photos/nepal?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+          </p>
+          <h3 class="feature-2">Home</h3>
+        </div>
+      </div>
+      <div class="background background3">
+        <div class="feature-photo">
+          <p>The warming lights of Boudanaath. When you are near this lights, the warmth is so pure and unique, it's not the warmth of your fireplace no. You have to go and feel it for yourself to know what I am talking about.<br>
+            <span>Photo by <a class="credit" href="https://unsplash.com/@jonnyjames2?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jonny James</a> on <a class="credit" href="https://unsplash.com/s/photos/nepal?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+          </p>
+          <h3 class="feature-3">Boudanath</h3>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="logo-container">
+        <img alt="Nepal flag" src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg">
+        <a href="/"><span>Nep<b style="color : #4BB543;">Share</b></span></a>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="hero-img">
+        <i class="fas fa-share-alt"></i>
+      </div>
+      <p class="hero-text">
+        Nepal Shares<br>
+        नेपाल गर्दै छ share !<br>
+        आउनु तपाई नि गर्नुहोस
+      </p>
+    </div>
+
+    <div class="features">
+      <ul>
+        <li>
+          सुपर fast Sharing !
+        </li>
+        <li>
+          प्रयोग गर्न सजिलो
+        </li>
+        <li>
+          नेपाली बाट नेपाली<br> कै लागि
+        </li>
+      </ul>
+    </div>
+    <% if(locals.files){ %>
+    <div class="download-box">
+      <i style="color : #4BB543; font-size : 43px;" class="fas fa-download"></i>
+      <% files.forEach(file => { %>
+        <ul>
+          <li>File name : <%= file.fileOriginalName %> </li>
+          <li> File size : <%= (file.fileSize / 2 ** 20).toFixed(3) %> MB </li>
+          <a class="download-btn" href="<%= file.downloadLink %>"><i class="fas fa-download"></i></a>
+        </ul>
+      <% }) %>
+    </div>
+  <% } %>
+
+  <% if(locals.error) { %>
+  <div style="top : 63vh" class="download-box">
+    <i style="color : red" class="fas fa-exclamation-circle"></i>
+    <p style="margin-top : 20px; color : red"><%= error %> </p>
+    <a style="text-decoration : none" href="/">Back to Home</a>
+  </div>
+  <% } %>
+
+  <% if(locals.uuid) { %> <div class="uuid" style="display : none"><%= uuid %></div> <% } %>
+
+  <div class="chat-btn">
+    <i class="fab fa-earlybirds"></i> <!--memo : chatBtn.firstElementChild is used !-->
+    <div class="newMsgsCount"></div>
+    <div class="chat-box">
+      <div class="inactive">User Inactive</div>
+      <div class="chatMsgs"></div>
+      <form class="msg-form">
+        <input type="text" class="msg-field">
+      </form>
+    </div>
+  </div>
+
+  <div class="more-files">
+    <i class="fas fa-dove"></i>
+    <span>2 Incoming files...</span>
+  </div>

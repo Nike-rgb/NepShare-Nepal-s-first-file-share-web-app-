@@ -1,0 +1,739 @@
+*{
+  margin : 0;
+  font-family : arial;
+  box-sizing: border-box;
+}
+
+html, body{
+  height : 100%;
+  width : 100%;
+  background-size: cover;
+}
+
+.backgroundContainer{
+  transition: transform 3s ease;
+  position: relative;
+  height : 100%;
+}
+
+.background{
+  background-size : cover;
+  width : 100%;
+  height : 100%;
+  background-color : rgba(0, 0, 0 , 0.2);
+  transition: opacity 3s ease;
+  position : absolute;
+  background-blend-mode: multiply;
+}
+
+.background1{
+  background-image : url('/img/nepal3.jpg');
+  z-index : 0;
+}
+
+.background2{
+  background-image : url('/img/nepal1.jpg');
+  z-index : -2;
+  opacity: 0;
+}
+
+.background3{
+  background-image : url('/img/nepal2.jpg');
+  z-index : -3;
+  opacity: 0;
+}
+
+.feature-photo{
+  width: 40%;
+      position: absolute;
+      left: 29%;
+      top: 4%;
+      text-align: center;
+      cursor: pointer;
+}
+
+.feature-photo h3{
+  text-align: center;
+    font-size: 39px;
+    word-spacing: -5px;
+}
+
+.feature-1{
+  color: #fdecff;
+  letter-spacing: 2px;
+}
+
+.feature-2{
+  color: #f3dc3eeb;
+    letter-spacing: 8px;
+}
+
+.feature-3{
+  color: #23f3e9d6;
+    letter-spacing: 5px;
+}
+
+.feature-photo:hover p{
+  opacity : 1;
+}
+
+.feature-photo p{
+  padding: 14px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #efe6ff;
+    margin-top: 15px;
+    padding-bottom: 24px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 45% 90%, 50% 100%, 55% 90%, 0 90%);
+    background: hsl(136deg 71% 41% / 59%);
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.credit{
+  display: inline-block;
+padding: 5px;
+background: #2196F3;
+color: white;
+border-radius: 5px;
+margin : 3px;
+}
+
+.credit:hover{
+  background: #398a1ebd;
+}
+
+header{
+height : 100px;
+position : absolute;
+top : 0;
+left : 10px;
+}
+
+.logo-container{
+  color : white;
+  height : 100%;
+  position : relative;
+}
+
+.logo-container img{
+  height : 60px;
+  position: absolute;
+  top : 20px;
+  left : 2%;
+}
+
+.logo-container span{
+  color: white;
+  display: inline-block;
+  padding: 10px;
+  padding-left: 11px;
+  border: 1.5px brown solid;
+  clip-path: polygon(17% 0, 100% 0, 100% 100%, 0 100%);
+  font-size: 20px;
+  position: absolute;
+  top: 30%;
+  letter-spacing: 3px;
+  left: 54px;
+}
+
+.upload-container{
+  position : absolute;
+  top : 55%;
+  left : 28%;
+  width : 40%;
+  background : #ffffffd9;
+  border-radius : 10px;
+  transition : transform 1s ease;
+  -webkit-box-shadow: 3px 2px 16px 3px #2196f354;
+  box-shadow: 3px 2px 16px 3px #2196f354;
+}
+
+.drop-icon-container{
+  text-align: center;
+  padding : 5px;
+}
+
+.dragged{
+  background : rgba(255, 0, 255, 0.2)
+}
+
+.dragged i{
+  animation : drop 1.5s ease infinite;
+  transition: transform 2s ease;
+}
+
+@keyframes drop {
+  50%{
+    transform : rotate(50deg);
+    color : blueviolet;
+  }
+  80%{
+    transform : rotate(-50deg);
+  }
+}
+
+.drop-icon-container i{
+  font-size : 60px;
+  margin : 30px 0;
+  color : #299631;
+}
+
+.drop-zone{
+  margin: 10px;
+  border-radius : 10px;
+  height : 200px;
+  position: relative;
+  border : #1920ec dotted 2px;
+  cursor: grab;
+  text-align: center;
+}
+
+.drop-zone p{
+  font-size : 14px;
+  position: absolute;
+  top : 68%;
+  left : 10%;
+  width: 80%;
+}
+
+.drop-zone p a{
+  color: white;
+  text-decoration: none;
+  background: #5f53ca;
+  padding: 7px;
+  margin-top  : 10px;
+  border-radius: 10px;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+.drop-zone p a:hover{
+  background : black;
+}
+
+.hero{
+  position: absolute;
+top: 10%;
+text-align: center;
+right: 3%;
+}
+
+.hero-img i{
+  animation : swing 5s ease infinite;
+  font-size: 18px;
+}
+
+@keyframes swing {
+  50% {
+    transform : rotate(30deg);
+  }
+  80%{
+    transform : rotate(-30deg);
+  }
+}
+
+.hero-text{
+  text-align: center;
+      color: white;
+      font-size: 16px;
+      line-height: 40px;
+      padding: 28px;
+      letter-spacing: 1.2px;
+      border-radius: 50%;
+      background: linear-gradient(149deg, #494490a1, #1b384c);
+      -webkit-box-shadow: -1px 5px 17px 1px #224d77;
+box-shadow: -1px 5px 17px 1px #224d77;
+  }
+
+.hero-img{
+  margin: 30px;
+    position: absolute;
+    left: 33%;
+    bottom: -169%;
+    font-size: 30px;
+    padding: 5px;
+    width: 43px;
+    height: 43px;
+    color : blueviolet;
+    border-radius: 50%;
+    background: white;
+}
+
+.features{
+  position: absolute;
+top: 30%;
+width: 25%;
+font-size: 17px;
+padding: 20px 40px 20px 5px;
+clip-path: polygon(0 0, 100% 0, 76% 100%, 0 100%);
+background: linear-gradient(-65deg, #1a988cf7, #00000047);
+color: white;
+}
+
+.features ul li{
+  margin : 10px 0;
+  transition : transform 1.5s ease;
+  cursor: pointer;
+}
+
+.features ul li:hover {
+  transform : translateX(20%);
+}
+
+.browse{
+  display : none;
+}
+
+.browseBtn{
+  cursor : pointer;
+}
+
+.progress{
+  position: fixed;
+  top: 96vh;
+  left: 0;
+  padding: 3px;
+  width: 200px;
+  opacity : 0;
+  transition : opacity 2s ease;
+  max-width: 200px;
+  background: #fff817c2;
+  border-radius: 5px;
+}
+
+.progress:before{
+  content : 'Uploading...';
+  position: absolute;
+    font-size: 15px;
+    width : 1%;
+    max-width : 90%;
+    left: 7px;
+    color: white;
+}
+
+.progress div{
+  background: #43b547;
+      width: 90%;
+      max-width: 90%;
+      border-radius: 5px;
+      padding: 10px;
+}
+
+.error-msg{
+  position: absolute;
+  top : 0;
+  text-align: center;
+  padding : 5px;
+  color : red;
+  width : 100%;
+  box-sizing: border-box;
+  background : #41325f;
+}
+
+.mail-msg{
+  position: absolute;
+max-width: 250px;
+padding: 6px;
+border-radius: 5px;
+text-align: center;
+color: white;
+top: 49%;
+right: 0;
+}
+
+.mail-error-msg{
+  background: #b54343;
+}
+
+.mail-success-msg{
+  background: #4BB543;
+}
+
+.download-box{
+  position: absolute;
+    top: 40vh;
+    background: #ffffffb5;
+    padding: 20px;
+    left: 30%;
+    border-radius: 5px;
+    width : 36%;
+    max-height: 59vh;
+    overflow-y: auto;
+    text-align: center;
+    -webkit-box-shadow: 2px 2px 13px 4px #000000;
+box-shadow: 2px 2px 13px 4px #000000e0;
+}
+
+.download-box:before {
+  content: 'Files shared to you';
+position: absolute;
+top: -31px;
+width: 80%;
+left: 10%;
+color: white;
+padding: 5px;
+border-radius: 3px
+}
+
+.download-box ul{
+  padding : 0;
+  list-style: none;
+  margin : auto;
+  margin-top : 10px;
+  position: relative;
+  font-size: 14px;
+  width : 95%;
+}
+
+.download-box ul li{
+  margin : 5px;
+}
+
+.download-box p {
+
+}
+
+.download-box i {
+  font-size: 20px;
+  color : #4BB543;
+}
+
+
+.download-btn{
+  position: absolute;
+  right : -6%;
+  top : 5px;
+  text-decoration: none;
+  position: absolute;
+}
+
+.download-box ul i:hover{
+  color : magenta;
+}
+
+.chat-btn{
+  width: 50px;
+    height: 50px;
+    position: fixed;
+    display : none;
+    top: 87%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 0 15px 15px 0;
+    background: #4bb543;
+    transition : transform 2s ease;
+}
+
+.chat-btn:hover i{
+  transform : scale(1.2);
+  color : #245d23;
+}
+
+.newMsgsCount{
+  position: absolute;
+    background: #ff00eb;
+    padding: 2px;
+    color: white;
+    height: 20px;
+    width: 20px;
+    right: -6px;
+    top: -8px;
+    display: none;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.chat-btn i{
+  color : white;
+  font-size: 30px;
+}
+
+.chat-box {
+  position: absolute;
+    background: #2196f394;
+    width: 300px;
+    bottom: -71%;
+    right: 100%;
+    height: 100vh;
+    transition : opacity 2s ease;
+    padding-bottom: 80px;
+}
+
+.chatMsgs{
+  height: 100%;
+    overflow-y: auto;
+}
+
+.msg{
+  width: 66%;
+    font-size: 14px;
+    padding: 15px;
+    margin: 13px;
+    border-radius: 5px;
+}
+
+.myMsg{
+  background: #ad2a85;
+      padding-left: 19px;
+      color: white;
+}
+
+@keyframes shake {
+  25%{
+    transform : rotate(30deg);
+  }
+
+  50%{
+    transform : rotate(0deg);
+  }
+
+  75%{
+    transform : rotate(-30deg);
+  }
+}
+
+.hisMsg{
+  margin-left: 31%;
+      background: #1cd02a;
+      padding-left: 24px;
+       color : #0b12de;
+}
+
+.msg-field{
+  width: 90%;
+      padding: 4px;
+      font-size: 17px;
+      left: 4%;
+      bottom: 2%;
+      position: absolute;
+}
+
+.inactive{
+  padding: 5px;
+position: absolute;
+bottom: 7%;
+display : none;
+background: #00e7ff61;
+width: 100%;
+color: #2700ff;
+text-align: center;
+}
+
+
+/*responsive */
+@media screen and (max-width : 700px) {
+  .hero-text{
+    font-size: 17px;
+  }
+
+  .upload-container{
+    width : 50%;
+    left : 25%;
+  }
+
+  .features{
+    display : none;
+  }
+
+  .feature-photo{
+    left : 11%;
+  }
+
+  .feature-photo p{
+    font-size: 13px;
+  }
+
+  .drop-zone{
+    height : 225px;
+  }
+
+  .copy-link{
+    top : 44px;
+  }
+}
+
+
+@media screen and (max-width : 500px) {
+  .hero-text{
+    font-size: 15px;
+    padding : 20px;
+    display : none;
+  }
+
+  .hero-img{
+    display: none;
+  }
+
+  .download-box {
+    max-height: 30vh;
+  }
+
+  .drop-icon-container i {
+    font-size: 52px;
+  }
+
+  .drop-zone{
+    height : 200px;
+  }
+
+  .upload-container{
+    width : 66%;
+    left : 17%;
+    top : 63%;
+  }
+
+  .features{
+    font-size: 14px;
+    width : 50%;
+    top : 31%;
+    display : none;
+  }
+
+  .feature-photo{
+    top : 20%;
+    width : 80%;
+    left : 10%;
+  }
+
+  .feature-photo p{
+    font-size : 13px;
+  }
+
+  .hero-img{
+    left: 22%;
+    bottom : -120%;
+  }
+
+  .download-box{
+    width : 70%;
+    left : 15%;
+    top : 65vh;
+
+  }
+
+  .download-box ul{
+    font-size : 13px;
+  }
+
+  .download-box:before{
+    font-size : 15px;
+  }
+}
+
+.upload-more{
+  position: fixed;
+      width: 60px;
+      right: 0;
+      display: none;
+      padding: 10px;
+      text-align: center;
+      top: 92%;
+      background: #9d40e4;
+      border-radius: 10px 0px 0 10px;
+}
+
+.upload-more a i{
+  font-size : 35px;
+  color : white;
+}
+
+.upload-more a i:hover{
+color : black;
+}
+
+.more-files{
+  position: fixed;
+    top: 96%;
+    right: 0;
+    background: #b5a243;
+    padding: 3px;
+    padding-left: 15px;
+    color: white;
+    border-radius: 6px 0 0 6px;
+    display : none;
+}
+
+.more-files i {
+  transition: transform 2s ease;
+    position: absolute;
+    top: -98%;
+    font-size: 26px;
+    left: 5%;
+    animation : slide 3s ease infinite;
+}
+
+@keyframes slide {
+  50%{
+    transform : translate(100px);
+  }
+}
+
+.emailBtn{
+  font-size: 25px;
+  position: fixed;
+  top: 41%;
+  right: 0px;
+  color: white;
+  padding: 10px;
+  background: #0072ff;
+  border-radius: 10px;
+  display: none;
+}
+
+.emailBtn:hover {
+  background: black;
+   border-radius: 0px 10px 10px 0px;
+}
+
+.emailBtn:hover .email-form{
+  opacity : 1;
+  clip-path: circle(100%);
+}
+
+.email-form{
+  width: 314px;
+    height: 100%;
+    position: absolute;
+    transition: clip-path 2s ease;
+    top: 0px;
+    right: 100%;
+    background: #ff00e0ad;
+    padding: 10px;
+    clip-path: circle(0% at 100% 50%);
+    border-radius: 10px 0px 0 10px;
+    opacity: 1;
+}
+
+.email-form input{
+  padding: 5px;
+      text-align: center;
+      margin-top: 5px;
+      border-radius: 3px;
+      border: 0;
+      width: 46%;
+      font-size: 14px;
+}
+
+.email-form button{
+  display: block;
+    width: 76px;
+    margin: 10px auto;
+    padding: 4px;
+    background: #007eff;
+    border: 0;
+    border-radius: 2px;
+    color: white;
+}
+
+.email-form button:hover{
+  background : black;
+}
+
+.copy-instruction{
+  font-size: 13px;
+    position: absolute;
+    top: 67px;
+}
