@@ -117,8 +117,8 @@ browse.onchange = () => {
     let markup = `
       <div class="uuid" style="display : none">${uuid}</div>
       <i style="color : black ; padding : 10px; font-size : 45px;" class="is-active fas fa-user"></i>
-      <input class="copy-link" style="display : block; position : relative; top : 27px; left : 3%; width : 90%; color : white; background : black; padding : 10px; margin-top : 20px; font-size : 14px;" value="${xhr.response.downloadPageLink}">
-        <div class="copy-instruction">Copy & send the link below to the receiver. You can also chat after s/he visits the link(icon turn green).</div>
+      <input class="copy-link" style="display : block; position : relative; top : 25px; left : 3%; width : 90%; color : white; background : black; padding : 10px; margin-top : 20px; font-size : 14px;" value="${xhr.response.downloadPageLink}">
+        <div class="copy-instruction">Copy & send the link below (you can email too right here) to the receiver. You can also chat after s/he visits the link(icon turn green).</div>
       <button id="execCopy" style="position: absolute; left: 42%; top: 82%;">Copy</button>
     `;
     dropZone.innerHTML = markup;
