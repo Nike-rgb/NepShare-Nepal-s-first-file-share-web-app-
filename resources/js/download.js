@@ -5,6 +5,14 @@ let bgContainer = document.querySelector('.backgroundContainer');
 let downloadBox = document.querySelector('.download-box');
 let moreFiles = document.querySelector('.more-files');
 
+//changing the viewport size
+let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+document.documentElement.width = w;
+document.documentElement.height = h;
+document.body.width = w;
+document.body.height = h;
+
 let counter = 0;
 setInterval(() => {
   counter ++;
