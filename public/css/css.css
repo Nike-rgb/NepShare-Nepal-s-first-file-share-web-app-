@@ -539,7 +539,9 @@ text-align: center;
   }
 
   .feature-photo{
-    left : 11%;
+    left : 2%;
+    top : 1%;
+    width : 47%;
   }
 
   .feature-photo p{
@@ -561,6 +563,12 @@ text-align: center;
     font-size: 15px;
     padding : 20px;
     display : none;
+  }
+
+  .progress{
+    top: 14vh;
+    left: 25%;
+    width: 50%;
   }
 
   .hero-img{
