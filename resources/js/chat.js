@@ -73,3 +73,10 @@ form.onsubmit = event => {
   chatMsgs.scrollTop = chatMsgs.scrollHeight;
   form.reset();
 }
+
+//making sure the viewport size remains constant on opening the keyboard
+document.documentElement.onresize = e => {
+  e.currentTarget.style.setProperty('overflow', 'auto');
+  const metaViewport = document.querySelector('meta[name=viewport]')
+  metaViewport.setAttribute('content', 'height=' + 100 + 'vh, width=device-width, initial-scale=1.0');
+}

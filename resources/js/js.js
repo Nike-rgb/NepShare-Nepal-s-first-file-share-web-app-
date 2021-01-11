@@ -11,13 +11,12 @@ let uploadForm = document.querySelector('.upload-form')
 let progressBar = document.querySelector('.progress');
 let uploadMore = document.querySelector('.upload-more');
 
-//changing the viewport size
-let w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-let h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-document.documentElement.width = w;
-document.documentElement.height = h;
-document.body.width = w;
-document.body.height = h;
+//making sure the viewport size remains constant on opening the keyboard
+document.documentElement.onresize = e => {
+  e.currentTarget.style.setProperty('overflow', 'auto');
+  const metaViewport = document.querySelector('meta[name=viewport]')
+  metaViewport.setAttribute('content', 'height=' + 100 + 'vh, width=device-width, initial-scale=1.0');
+}
 
 let counter = 0;
 setInterval(() => {
