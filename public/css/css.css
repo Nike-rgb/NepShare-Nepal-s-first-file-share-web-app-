@@ -418,7 +418,7 @@ border-radius: 3px
     height: 50px;
     position: fixed;
     display : none;
-    top: 87%;
+    bottom : 0;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 0 15px 15px 0;
@@ -455,7 +455,7 @@ border-radius: 3px
   position: absolute;
     background: #2196f394;
     width: 300px;
-    bottom: -71%;
+    bottom: 0;
     right: 100%;
     height: 100vh;
     transition : opacity 2s ease;
