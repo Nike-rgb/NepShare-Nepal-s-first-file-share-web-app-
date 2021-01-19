@@ -1,0 +1,2 @@
+MONGO_DB_URI = your mongoDB URI
+APP_BASE_URL = your app base url eg. http://example.com
