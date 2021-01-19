@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 require('dotenv').config();
 
 //setting up the server
@@ -8,6 +9,13 @@ const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
   console.log("Server running on port " + PORT);
 });
+
+//CORS
+const corsOptions = {
+  origin : 'http://ioematerials.epizy.com',
+}
+
+app.use(cors(corsOptions));
 
 //serving static Files
 app.use(express.static('./public'));
